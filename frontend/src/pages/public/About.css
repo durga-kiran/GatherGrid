@@ -1,0 +1,129 @@
+
+/* About Page */
+
+.about-container {
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* About Hero Section */
+.about-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+}
+
+.about-hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Our Story */
+.about-story {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.about-story h2 {
+    font-size: 32px;
+    color: #1e293b;
+    margin-bottom: 20px;
+}
+
+.about-story p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #64748b;
+    max-width: 850px;
+    margin: auto;
+}
+
+/* Mission and Vision */
+.mission-vision {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 8%;
+}
+
+.about-card {
+    flex: 1;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.about-card h2 {
+    color: #4f46e5;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* Why Choose Us */
+.why-us {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: white;
+}
+
+.why-us h2 {
+    font-size: 32px;
+    color: #1e293b;
+    margin-bottom: 35px;
+}
+
+.why-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.why-card {
+    padding: 30px 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+}
+
+.why-card h3 {
+    color: #4f46e5;
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mission-vision {
+        flex-direction: column;
+    }
+
+    .about-hero h1 {
+        font-size: 32px;
+    }
+
+    .about-story {
+        padding: 40px 6%;
+    }
+}

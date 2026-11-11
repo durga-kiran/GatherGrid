@@ -1,0 +1,38 @@
+
+.dashboard-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f8f9fc;
+}
+
+.dashboard-body {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+}
+
+.dashboard-main {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+    background: #f8f9fc;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .dashboard-main {
+        padding: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .dashboard-body {
+        flex-direction: column;
+    }
+
+    .dashboard-main {
+        padding: 15px;
+    }
+}
