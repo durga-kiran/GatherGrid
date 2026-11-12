@@ -1,0 +1,18 @@
+
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 10px 12px;
+    color: #dc2626;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.error-message svg {
+    flex-shrink: 0;
+}

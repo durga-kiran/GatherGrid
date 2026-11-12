@@ -1,0 +1,154 @@
+
+.customer-dashboard {
+    min-height: 100vh;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.customer-header {
+    background: #ffffff;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.customer-header h2 {
+    color: #4f46e5;
+    font-size: 25px;
+}
+
+.customer-header nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.customer-header nav a {
+    text-decoration: none;
+    color: #334155;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.customer-header nav a:hover {
+    color: #4f46e5;
+}
+
+/* Main Content */
+.customer-content {
+    flex: 1;
+    padding: 40px 5%;
+}
+
+/* Welcome Section */
+.customer-welcome {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 60px 40px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.customer-welcome h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.customer-welcome p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.explore-btn {
+    display: inline-block;
+    background: white;
+    color: #4f46e5;
+    padding: 12px 25px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.explore-btn:hover {
+    background: #eef2ff;
+}
+
+/* Dashboard Cards */
+.customer-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.customer-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s;
+}
+
+.customer-card:hover {
+    transform: translateY(-5px);
+}
+
+.customer-card h3 {
+    color: #1e293b;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.customer-card p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.customer-card a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.customer-card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.customer-footer {
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .customer-header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .customer-header nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .customer-welcome {
+        padding: 40px 25px;
+    }
+
+    .customer-welcome h1 {
+        font-size: 28px;
+    }
+
+    .customer-options {
+        grid-template-columns: 1fr;
+    }
+}

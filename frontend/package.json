@@ -14,9 +14,15 @@
     "lucide-react": "^1.72.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
+<<<<<<< HEAD
     "react-icons": "^5.7.0",
     "react-router-dom": "^7.18.5",
     "react-toastify": "^11.2.0"
+=======
+    "react-router-dom": "^7.18.5",
+    "react-toastify": "^11.2.0",
+    "recharts": "^3.10.1"
+>>>>>>> dd602eb0851def5026d21d11e319dabab70c0ae4
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

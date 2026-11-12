@@ -1,0 +1,148 @@
+
+.dashboard-navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #ffffff;
+    border-bottom: 1px solid #e8eaf0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Brand */
+.dashboard-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #635bff;
+    font-size: 23px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dashboard-brand svg {
+    color: #635bff;
+}
+
+/* Navigation links */
+.dashboard-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.dashboard-nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dashboard-nav-links a:hover {
+    color: #635bff;
+}
+
+/* User section */
+.dashboard-user-section {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.dashboard-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.dashboard-user-name {
+    color: #171923;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.dashboard-user-role {
+    color: #94a3b8;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+/* Logout button */
+.dashboard-logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 15px;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    background: #fff5f5;
+    color: #dc2626;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dashboard-logout-btn:hover {
+    background: #dc2626;
+    color: #ffffff;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .dashboard-navbar {
+        flex-wrap: wrap;
+        padding: 15px 4%;
+    }
+
+    .dashboard-nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        padding-top: 10px;
+        border-top: 1px solid #e8eaf0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .dashboard-navbar {
+        gap: 12px;
+    }
+
+    .dashboard-brand {
+        font-size: 19px;
+    }
+
+    .dashboard-user-section {
+        gap: 8px;
+    }
+
+    .dashboard-user-name {
+        font-size: 12px;
+    }
+
+    .dashboard-logout-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .dashboard-nav-links {
+        gap: 18px;
+    }
+
+    .dashboard-nav-links a {
+        font-size: 12px;
+    }
+}

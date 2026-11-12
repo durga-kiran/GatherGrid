@@ -1,0 +1,255 @@
+
+/* =====================================
+   GATHERGRID NAVBAR
+===================================== */
+
+.navbar {
+  width: 100%;
+  height: 78px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8eaf0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1280px;
+  height: 100%;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: 'Outfit', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  color: #171923;
+  white-space: nowrap;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+
+  background: #635bff;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-highlight {
+  color: #635bff;
+}
+
+/* Navigation Links */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active-link {
+  color: #635bff;
+}
+
+.nav-link.active-link::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #635bff;
+  border-radius: 50%;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Authentication Buttons */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-link:hover {
+  color: #635bff;
+}
+
+.register-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #635bff;
+  color: white;
+
+  padding: 12px 20px;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  background: #5145e5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(99, 91, 255, 0.2);
+}
+
+/* Mobile Menu */
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: #171923;
+}
+
+.mobile-auth {
+  display: none;
+}
+
+/* =====================================
+   RESPONSIVE NAVBAR
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .navbar-container {
+    width: 94%;
+  }
+
+  .navbar-actions {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar-logo {
+    font-size: 22px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1002;
+  }
+
+  .navbar-actions {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+
+    background: white;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 15px 5% 25px;
+
+    border-bottom: 1px solid #e8eaf0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 13px 0;
+    border-bottom: 1px solid #f1f1f5;
+  }
+
+  .nav-link.active-link::after {
+    display: none;
+  }
+
+  .mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .mobile-login,
+  .mobile-register {
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .mobile-login {
+    color: #635bff;
+    border: 1px solid #635bff;
+  }
+
+  .mobile-register {
+    color: white;
+    background: #635bff;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .navbar-logo {
+    font-size: 20px;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+}

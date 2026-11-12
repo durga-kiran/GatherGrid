@@ -1,0 +1,52 @@
+
+/* Event Grid Layout */
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    margin: 25px 0;
+}
+
+/* Empty Events Message */
+
+.event-grid-empty {
+    width: 100%;
+    padding: 55px 20px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px dashed #d8d5e8;
+    border-radius: 14px;
+    margin: 25px 0;
+}
+
+.event-grid-empty h3 {
+    color: #25213a;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.event-grid-empty p {
+    color: #77758a;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+    .event-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .event-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
 
 :root {
@@ -14,20 +15,241 @@
   --border: #e9e9e6;
 }
 
+=======
+/* =====================================
+   GATHERGRID - GLOBAL DESIGN SYSTEM
+===================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* CSS Variables */
+:root {
+  --primary: #635bff;
+  --primary-dark: #5145e5;
+  --primary-light: #eeedff;
+
+  --secondary: #ff6b6b;
+
+  --background: #f8f9fc;
+  --surface: #ffffff;
+
+  --text-primary: #171923;
+  --text-secondary: #64748b;
+  --text-light: #94a3b8;
+
+  --border: #e8eaf0;
+
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #f59e0b;
+
+  --font-primary: 'DM Sans', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.10);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+
+  --transition: all 0.3s ease;
+}
+
+/* =====================================
+   CSS RESET
+===================================== */
+
+>>>>>>> dd602eb0851def5026d21d11e319dabab70c0ae4
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 body {
   min-width: 320px;
   min-height: 100vh;
+=======
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-width: 320px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =====================================
+   TYPOGRAPHY
+===================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+>>>>>>> dd602eb0851def5026d21d11e319dabab70c0ae4
 }
 
 a {
   text-decoration: none;
   color: inherit;
+<<<<<<< HEAD
+=======
+  transition: var(--transition);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* =====================================
+   FORM ELEMENTS
+===================================== */
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: var(--transition);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.12);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-light);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* =====================================
+   IMAGES
+===================================== */
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+>>>>>>> dd602eb0851def5026d21d11e319dabab70c0ae4
 }
 
 button,
@@ -37,6 +259,7 @@ select {
   font: inherit;
 }
 
+<<<<<<< HEAD
 button {
   cursor: pointer;
 }
@@ -4920,3 +5143,139 @@ img {
   }
 }
 
+=======
+/* =====================================
+   COMMON UTILITY CLASSES
+===================================== */
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title h2 {
+  margin-bottom: 12px;
+}
+
+.section-title p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+/* =====================================
+   SCROLLBAR
+===================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c4c4d0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* =====================================
+   TEXT SELECTION
+===================================== */
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+  .container {
+    width: 92%;
+  }
+
+  .section {
+    padding: 55px 0;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 94%;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+}
+html,
+body,
+#root {
+    min-height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+>>>>>>> dd602eb0851def5026d21d11e319dabab70c0ae4

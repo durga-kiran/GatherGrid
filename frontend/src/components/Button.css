@@ -1,0 +1,47 @@
+
+.custom-btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-btn.primary {
+    background: #635bff;
+    color: white;
+}
+
+.custom-btn.primary:hover {
+    background: #5145e5;
+    transform: translateY(-2px);
+}
+
+.custom-btn.secondary {
+    background: #eeedff;
+    color: #635bff;
+}
+
+.custom-btn.outline {
+    background: transparent;
+    border: 1px solid #635bff;
+    color: #635bff;
+}
+
+.custom-btn.small {
+    padding: 8px 14px;
+    font-size: 13px;
+}
+
+.custom-btn.large {
+    padding: 15px 28px;
+    font-size: 17px;
+}
+
+.custom-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
