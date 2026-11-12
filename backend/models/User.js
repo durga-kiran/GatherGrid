@@ -31,6 +31,25 @@ const userSchema = new mongoose.Schema(
       select: false
     },
 
+    // Email Verification Fields
+    emailVerified: {
+      type: Boolean,
+      default: false
+    },
+
+    emailVerificationCodeHash: {
+      type: String,
+      select: false
+    },
+
+    emailVerificationExpires: {
+      type: Date
+    },
+
+    emailVerificationLastSentAt: {
+      type: Date
+    },
+
     role: {
       type: String,
       enum: ["user", "admin"],
@@ -50,12 +69,14 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Hash password before saving
 userSchema.pre("save", async function () {
   if (!this.isModified("password")) return;
 
   this.password = await bcrypt.hash(this.password, 12);
 });
 
+// Compare password during login
 userSchema.methods.comparePassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };

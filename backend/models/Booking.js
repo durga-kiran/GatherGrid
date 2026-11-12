@@ -1,78 +1,108 @@
 
 import mongoose from "mongoose";
 
+const bookedTicketSchema = new mongoose.Schema({
+  ticketTypeId: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+  },
+
+  ticketName: {
+    type: String,
+    required: true,
+  },
+
+  quantity: {
+    type: Number,
+    required: true,
+    min: 1,
+  },
+
+  price: {
+    type: Number,
+    required: true,
+    min: 0,
+  },
+});
+
 const bookingSchema = new mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
-      required: true
+      required: true,
     },
 
     event: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Event",
-      required: true
+      required: true,
     },
 
     bookingReference: {
       type: String,
       unique: true,
-      required: true
+      required: true,
     },
 
-    tickets: [
-      {
-        ticketName: {
-          type: String,
-          required: true
-        },
-        quantity: {
-          type: Number,
-          required: true,
-          min: 1
-        },
-        price: {
-          type: Number,
-          required: true,
-          min: 0
-        }
-      }
-    ],
+    tickets: {
+      type: [bookedTicketSchema],
+      required: true,
+      validate: {
+        validator: (tickets) => tickets.length > 0,
+        message: "At least one ticket is required.",
+      },
+    },
 
     subtotal: {
       type: Number,
-      required: true
+      required: true,
+      min: 0,
     },
 
     tax: {
       type: Number,
-      default: 0
+      default: 0,
+      min: 0,
     },
 
     convenienceFee: {
       type: Number,
-      default: 0
+      default: 0,
+      min: 0,
     },
 
     totalAmount: {
       type: Number,
-      required: true
+      required: true,
+      min: 0,
     },
 
     paymentStatus: {
       type: String,
-      enum: ["pending", "paid", "failed", "refunded"],
-      default: "pending"
+      enum: [
+        "pending",
+        "paid",
+        "failed",
+        "refunded",
+        "not_required",
+      ],
+      default: "pending",
     },
 
     bookingStatus: {
       type: String,
-      enum: ["pending", "confirmed", "cancelled"],
-      default: "pending"
-    }
+      enum: [
+        "pending",
+        "confirmed",
+        "cancelled",
+      ],
+      default: "pending",
+    },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+  }
 );
 
 const Booking = mongoose.model("Booking", bookingSchema);

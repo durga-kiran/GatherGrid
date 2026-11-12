@@ -99,9 +99,8 @@ const eventSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
 eventSchema.pre("validate", function () {
-  this.availableSeats = this.ticketTypes.reduce(
+  this.availableSeats = (this.ticketTypes || []).reduce(
     (total, ticket) =>
       total + ticket.quantity - ticket.sold,
     0

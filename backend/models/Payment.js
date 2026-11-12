@@ -6,38 +6,68 @@ const paymentSchema = new mongoose.Schema(
     booking: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Booking",
-      required: true
+      required: true,
     },
 
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
-      required: true
+      required: true,
     },
 
     amount: {
       type: Number,
-      required: true
+      required: true,
+      min: 0,
+    },
+
+    currency: {
+      type: String,
+      default: "INR",
     },
 
     paymentMethod: {
       type: String,
-      default: "mock"
+      enum: ["razorpay", "mock"],
+      default: "mock",
     },
 
+    // Razorpay fields (for future integration)
+    razorpayOrderId: {
+      type: String,
+      unique: true,
+      sparse: true,
+    },
+
+    razorpayPaymentId: {
+      type: String,
+      unique: true,
+      sparse: true,
+    },
+
+    razorpaySignature: {
+      type: String,
+      select: false,
+    },
+
+    // Transaction reference for mock or real payments
     transactionId: {
       type: String,
       unique: true,
-      sparse: true
+      sparse: true,
     },
 
     paymentStatus: {
       type: String,
       enum: ["pending", "success", "failed", "refunded"],
-      default: "pending"
-    }
+      default: "pending",
+    },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+  }
 );
 
-export default mongoose.model("Payment", paymentSchema);
+const Payment = mongoose.model("Payment", paymentSchema);
+
+export default Payment;
